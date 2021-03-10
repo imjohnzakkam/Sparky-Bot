@@ -7,6 +7,8 @@ A Discord bot for Codechef
 2. Check recent submissions by a user
 3. Check upcoming contests.
 4. Plot Rating Graph
+5. Get useful insights about a user instantly
+6. Get random unsolved problem by difficulty
 
 ## Images
 
@@ -21,6 +23,12 @@ A Discord bot for Codechef
 
 #### Check upcoming contests
 <img src="https://i.ibb.co/TMVnwyg/cont.png" alt="cont" border="0">
+
+#### Get useful insights about a user instantly
+![](https://i.ibb.co/23kzXBS/sssss.png)
+
+#### Get random unsolved problem by difficulty
+![](https://i.ibb.co/7nGGYMb/Capture.png)
 
 ## Installation
 
@@ -40,10 +48,11 @@ pip install -r requirements.txt
 Create a bot on your server. Here is a [tutorial](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token) on that
 
 #### Add Bot Token
-
-In `main.py` replace  `"YOUR BOT TOKEN"` with your bot token.
-In `Utils\constants.py` replace `OWNER` with your Discord User ID
-In `Utils\constants.py` set `DEBUG` to `True`
+0. Create an Enviroment Variable `DEBUG` and set it to '1'
+1. In `cogs\Utils\constants.py` replace `TOKEN` line 30, with your bot token.
+2. In `cogs\Utils\constants.py` replace `OWNER` with your Discord User ID
+3. In `cogs\Utils\constants.py` set `DEBUG` to `True`
+4. In `cogs\Utils\cc_api.py` set `CLIENT_ID` and `CLIENT_SECRET` with your API Credentials respectively.
 
 
 #### Final Steps 
@@ -63,7 +72,9 @@ python main.py
  - 5★
  - 6★
  - 7★
-2. To run bot commands, use prefix (`=`) , e.g `=handles`
+2. To run bot commands, use prefix (`=`) , e.g `=contest future`
+3. Bot should have Admin privileges.
+
 
 ## Footer
 
@@ -72,5 +83,5 @@ All contributions are welcome.
 
 ## Thanks
 
-- [imjohnzakkam](https://github.com/imjohnzakkam) for testing the bot in development and giving valuable feedback.
+- [imjohnzakkam](https://github.com/imjohnzakkam) for developing and testing the bot in development and giving valuable feedback.
 - [SayangitBIT](https://github.com/SayangitBIT) for testing the bot in development and giving valuable feedback.
